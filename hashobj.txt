@@ -1,0 +1,21 @@
+$ echo 'test content' | git hash-object --stdin
+d670460b4b4aece5915caf5c68d12f560a9fe3e4
+only show hash result,no storing.
+
+$ echo 'test content' | git hash-object -w --stdin
+d670460b4b4aece5915caf5c68d12f560a9fe3e4
+ 
+$ find .git/objects -type f
+.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4
+
+---
+$ echo 'version 1' > test.txt
+$ git hash-object -w test.txt
+83baae61804e65cc73a7201a7252750c76066a30
+83/baae61804e65cc73a7201a7252750c76066a30 will be added to .git/objects/
+
+$ echo 'version 2' > test.txt
+$ git hash-object -w test.txt
+1f7a7a472abf3dd9643fd615f6da379c4acb3e3a
+1/f7a7a472abf3dd9643fd615f6da379c4acb3e3a will be added to .git/objects/ too,this is another verison of test.txt
+ 

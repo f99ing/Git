@@ -1,0 +1,43 @@
+$ git init 
+add a.txt, add some text
+commit
+
+change a.txt to ab.txt
+
+$ git status
+Changes not staged for commit:
+        deleted:    a.txt
+Untracked files:
+        ab.txt
+
+rename ab.txt to abc.txt
+
+$ git status
+Changes not staged for commit:
+        deleted:    a.txt
+Untracked files:
+        abc.txt
+
+modify sth(append a char 'd') in abc.txt
+rename abc.txt to a.txt
+$ git status
+Changes not staged for commit:
+        modified:   a.txt
+
+redo the modification(delete the last char 'd')
+$ git status
+on branch master
+nothing to commit, working directory clean
+
+
+git mv a.txt b.txt
+$ git status
+On branch master
+Changes to be committed:
+        renamed:    a.txt -> b.txt
+which is the same as 
+rename a.txt to b.txt
+$ git rm a.txt		
+$ git add  b.txt
+ 
+note:  git rm a.txt will delete a.txt, and staging the change.

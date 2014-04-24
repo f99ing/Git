@@ -1,0 +1,10 @@
+in GitBash
+goto /e/mydir
+$ git clone git://github.com/schacon/grit.git
+
+That creates a directory named grit under mydir, initializes a .git directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. 
+
+$ git clone git://github.com/schacon/grit.git mygrit
+same as above,except folder name is mygrit,not grit
+
+you may also see http(s):// or user@server:/path.git, which uses the SSH transfer protocol. Chapter 4 has details

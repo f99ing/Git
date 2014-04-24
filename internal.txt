@@ -1,0 +1,9 @@
+$ find .git/objects -type f
+.git/objects/1d/0bf760e559c274ca7a1ee85b06f825fbedc750
+.git/objects/f2/ba8f84ab5c1bce84a7b441cb1959cfc7093b7f
+
+$ git cat-file -p f2ba8f84ab5c1bce84a7b441cb1959cfc7093b7f
+abc
+
+$ git cat-file -t f2ba8f84ab5c1bce84a7b441cb1959cfc7093b7f
+blob

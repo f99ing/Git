@@ -1,0 +1,8 @@
+in GitBash
+goto /e/mydir
+$ git init
+will create hidden folder .git under mydir
+
+then you can do other operations like
+$ git add README
+$ git commit -m 'initial project version'

@@ -1,0 +1,54 @@
+git status command. 
+
+If you run this command directly after a clone:
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+the command tells you which branch you’re on.
+This result means you have a clean working directory:no untracked files, no tracked files are modified.
+
+ 
+add a.txt
+$ git status
+this will list all untracked files
+...
+ Untracked files: 
+ a.txt
+ ....
+
+$ git add *
+$ git commit -m "mymsg"
+delete a.txt
+$ git status
+Changes not staged for commit:
+  deleted:    a.txt
+$ git checkout -- a.txt
+a.txt appear again
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+delete a.txt again
+$ git add a.txt		or	 $ git add *
+show a waring that behavior will change in Git 2.0
+this is the same as 
+$ git add a.txt  --ignore-removal
+$ git status will show the same as before git add, the change is not staged
+
+$ git add --all a.txt
+$ git status
+On branch master
+Changes to be committed:
+ deleted:    a.txt
+
+$ git reset HEAD *
+Unstaged changes after reset:
+D       a.txt
+$ git status
+On branch master
+Changes not staged for commit:
+        deleted:    a.txt
+if not execute git reset,instead
+$ git checkout -- a.txt
+error: pathspec 'a.txt' did not match any file(s) known to git.
