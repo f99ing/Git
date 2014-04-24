@@ -8,6 +8,8 @@ warning: You appear to have cloned an empty repository.
 Checking connectivity... done.
 a folder /e/mydir/Git will be created, with hidden subfolder ".git" in it
 
+$cd git
+
 add some file in /e/mydir/Git
 $ git status
 will report untracked file
@@ -20,3 +22,5 @@ $ git commit -m "basic"
 commit the staging area with message 'basic'
 
 $ git push origin master
+open  .git/config to see how  origin master are defined.
+open https://github.com/f99ing/Git.git see the repo,new files are added here.
