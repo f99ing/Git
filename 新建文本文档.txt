@@ -30,7 +30,7 @@ On branch master
 nothing to commit, working directory clean
 
 delete a.txt again
-$ git add a.txt		or	 $ git add *
+$ git add a.txt		 
 show a waring that behavior will change in Git 2.0
 this is the same as 
 $ git add a.txt  --ignore-removal
